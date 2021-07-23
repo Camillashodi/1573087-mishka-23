@@ -49,8 +49,8 @@
             </p>
           </header>
           <ul class="types-of-goods__list">
-            <li class="types-of-goods__item">Предметы интерьера</li>
-            <li class="types-of-goods__item">Детские игрушки</li>
+            <li class="types-of-goods__item"><a href="#" class="types-of-goods__link">Предметы интерьера</a></li>
+            <li class="types-of-goods__item"><a href="#" class="types-of-goods__link">Детские игрушки</a></li>
           </ul>
         </div>
       </section>
@@ -62,18 +62,18 @@
             Экологически чистая пряжа, ручная работа. Доступны в шести
             расцветках и трёх размерах.
           </p>
-          <table class="weekly-product__table table-description">
-            <tr class="table-description__row">
-              <td class="table-description__data">Цвет:</td>
-              <td class="table-description__data">«Тиффани»/серый</td>
+          <table class="weekly-product__table">
+            <tr class="weekly-product__row">
+              <td class="weekly-product__data">Цвет:</td>
+              <td class="weekly-product__data">«Тиффани»/серый</td>
             </tr>
-            <tr class="table-description__row">
-              <td class="table-description__data">Диаметр:</td>
-              <td class="table-description__data">25 см</td>
+            <tr class="weekly-product__row">
+              <td class="weekly-product__data">Диаметр:</td>
+              <td class="weekly-product__data">25 см</td>
             </tr>
-            <tr class="table-description__row">
-              <td class="table-description__data">Высота:</td>
-              <td class="table-description__data">15 см</td>
+            <tr class="weekly-product__row">
+              <td class="weekly-product__data">Высота:</td>
+              <td class="weekly-product__data">15 см</td>
             </tr>
           </table>
           <p class="weekly-product__image">
@@ -85,16 +85,18 @@
           <a href="#" class="button weekly-product__order">ЗАКАЗАТЬ</a>
         </div>
       </section>
-      <section class="features features__wrapper">
-        <h2 class="features__title">Коротко о нас:</h2>
-        <ul class="features__list">
-          <li class="features__item">Экологически чистые материалы</li>
-          <li class="features__item">Скандинавский стиль по российской цене</li>
-          <li class="features__item">Увеличивает лайки на фотографиях</li>
-          <li class="features__item">Связано вручную с любовью и умилением</li>
-          <li class="features__item">Поддержка отечественного производителя</li>
-          <li class="features__item">Поставляется в подарочной упаковке</li>
-        </ul>
+      <section class="features">
+        <div class="features__wrapper">
+          <h2 class="features__title">Коротко о нас:</h2>
+          <ul class="features__list">
+            <li class="features__item">Экологически чистые материалы</li>
+            <li class="features__item">Скандинавский стиль по российской цене</li>
+            <li class="features__item">Увеличивает лайки на фотографиях</li>
+            <li class="features__item">Связано вручную с любовью и умилением</li>
+            <li class="features__item">Поддержка отечественного производителя</li>
+            <li class="features__item">Поставляется в подарочной упаковке</li>
+          </ul>
+        </div>
       </section>
       <section class="reviews">
         <div class="reviews__wrapper slider">
@@ -142,7 +144,7 @@
           </div>
           <button class="reviews__prev" type="button">Предыдущий отзыв</button>
           <button class="reviews__next" type="button">Следующий отзыв</button>
-          <button class="reviews__add-button button" type="button">Написать</button>
+          <a href="#" class="reviews__add-button button">Написать</a>
         </div>
       </section>
       <section class="contacts">
@@ -151,7 +153,7 @@
           <table class="contacts__table">
             <tr>
               <td>e-mail:</td>
-              <td class="contacts__email">info@mimimishkashop.ru</td>
+              <td class="contacts__email"><a href="mailto:info@mimimishkashop.ru" class="contacts__email-link">info@mimimishkashop.ru</a></td>
             </tr>
             <tr>
               <td>адрес:</td>
@@ -161,7 +163,7 @@
         </div>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003183!2d30.3208587162202!3d59.938719169054046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTE4Ng!5e0!3m2!1sru!2sru!4v1627038260703!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         <div class="contacts__wrapper">
-          <button class="contacts__write-button button" type="button">Напишите нам</button>
+          <a href="#" class="contacts__write-button button">Напишите нам</a>
         </div>
       </section>
     </main>
@@ -192,20 +194,20 @@
     <section class="modal-order">
       <div class="modal-order__wrapper">
         <h2 class="modal-order__title">Добавить в корзину</h2>
-        <form action="#" method="POST" class="modal-order__form modal-form">
+        <form action="https://echo.htmlacademy.ru" method="POST" class="modal-order__form modal-form">
           <fieldset class="modal-form__fieldset">
             <legend class="modal-form__legend">Выберите размер:</legend>
             <ul class="modal-form__checkbox-list">
               <li class="modal-form__checkbox-item">
-                <input class="modal-form__checkbox-input" type="checkbox" id="size-S" checked>
+                <input class="modal-form__checkbox-input" type="checkbox" id="size-S" name="size-S" checked>
                 <label for="size-S">S</label>
               </li>
               <li class="modal-form__checkbox-item">
-                <input class="modal-form__checkbox-input" type="checkbox" id="size-M">
+                <input class="modal-form__checkbox-input" type="checkbox" id="size-M" name="size-M">
                 <label for="size-M">M</label>
               </li>
               <li class="modal-form__checkbox-item">
-                <input class="modal-form__checkbox-input" type="checkbox" id="size-L">
+                <input class="modal-form__checkbox-input" type="checkbox" id="size-L" name="size-L">
                 <label for="size-L">L</label>
               </li>
             </ul>
