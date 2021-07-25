@@ -3,40 +3,46 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Мишка</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon/favicon.svg">
+    <link rel="icon" href="favicon/180.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__logo">
-        <img src="img/content/mishka-logo-underline.svg" alt="Магазин «Мишка»" />
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a href="#">Каталог товаров</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#">Вязание на заказ</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#">Новые поступления</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#">Распродажа</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#">Поиск по сайту</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#">Корзина: пока пуста</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <p class="page-header__text">Бесплатная доставка по России</p>
+      <div class="page-header__wrapper">
+        <a class="page-header__logo">
+          <img src="img/content/mishka-logo-underline.svg" alt="Магазин «Мишка»" />
+        </a>
+        <nav class="main-nav">
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="catalog.html">Каталог товаров</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="form.html">Вязание на заказ</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#">Новые поступления</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#">Распродажа</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#">Поиск по сайту</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#">Корзина: пока пуста</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <p class="page-header__text">Бесплатная доставка по России</p>
+      </div>
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Магазин товаров ручной работы - «Мишка»</h1>
@@ -187,7 +193,7 @@
         </div>
         <div class="page-footer__copyright copyright">
           <b class="copyright__text">Разработано:</b>
-          <a href="#" class="copyright__link">HTML Academy</a>
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">HTML Academy</a>
         </div>
       </div>
     </footer>
