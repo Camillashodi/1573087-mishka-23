@@ -1,0 +1,11 @@
+.main-header {
+  background-color: $base-second-color;
+}
+
+.main-header__wrapper {
+  @include wrapper();
+}
+
+.main-header__title {
+  @include font-styles($font-size-header-title, bold, $line-size-header-title);
+}

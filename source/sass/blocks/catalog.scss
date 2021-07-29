@@ -1,0 +1,28 @@
+.catalog__list {
+  @include list-style-none();
+}
+
+.catalog__title-link {
+  text-decoration: none;
+  color: $text-title-color;
+  &:hover,
+  &:focus {
+    color: $text-link-hover-color;
+  }
+  &:active {
+    color: $text-link-active-color;
+  }
+}
+
+.catalog__product-name {
+  @include font-styles($font-size-product, bold, $line-size-product);
+}
+
+.catalog__product-description {
+  color: $text-description-color;
+  @include font-styles($font-size-product-desc, normal, $line-size-product-desc);
+}
+
+.catalog__product-price {
+  @include font-styles($font-size-product-price, bold, $line-size-product-price);
+}

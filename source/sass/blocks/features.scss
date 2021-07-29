@@ -1,0 +1,15 @@
+.features {
+  @include font-styles($font-size-features, bold, $line-size-features);
+}
+
+.features__title {
+  @include font-styles($font-size-section-title, bold, $line-size-section-title);
+}
+
+.features__wrapper {
+  @include wrapper();
+}
+
+.features__list {
+  @include list-style-none;
+}

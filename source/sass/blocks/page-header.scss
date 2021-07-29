@@ -1,0 +1,21 @@
+.page-header {
+  background-color: $base-color;
+}
+
+.page-header__logo {
+  display: block;
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.page-header__wrapper {
+  @include wrapper ();
+}
+
+.page-header__text {
+  display: none;
+  @include font-styles($font-size-nav-desc, normal, $line-size-nav-desc);
+}
