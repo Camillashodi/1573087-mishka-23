@@ -4,4 +4,5 @@
 
 .order-choice__text {
   @include font-styles($font-size-form-desc, normal, $line-size-form-desc);
+  color: $text-description-color;
 }

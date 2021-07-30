@@ -1,5 +1,6 @@
 .reviews {
   @include font-styles($font-size-reviews, normal, $line-size-reviews);
+  color: $text-description-color;
 }
 
 .reviews__wrapper {
@@ -8,6 +9,7 @@
 
 .reviews__title {
   @include font-styles($font-size-section-title, bold, $line-size-section-title);
+  color: $text-title-color;
 }
 
 .reviews__body {
@@ -17,9 +19,12 @@
 
 .reviews__author {
   font-style: normal;
+  color: $text-description-color;
+
   @include font-styles($font-size-author, normal, $line-size-author);
 }
 
 .reviews__author-name {
   font-weight: bold;
+  color: $text-title-color;
 }

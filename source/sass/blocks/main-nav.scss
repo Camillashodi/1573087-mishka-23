@@ -17,10 +17,12 @@
   a {
     color: $text-nav-color;
     text-decoration: none;
+
     &:hover,
     &:focus {
       color: $text-nav-hover-color;
     }
+
     &:active {
       color: $text-nav-active-color;
     }

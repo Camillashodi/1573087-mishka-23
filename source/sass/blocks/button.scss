@@ -1,15 +1,18 @@
 .button {
   text-decoration: none;
+
   @include font-styles(18px, bold, 20px);
   color: $button-text-color;
   border: $button-border;
   box-sizing: border-box;
   text-transform: uppercase;
+
   &:hover,
   &:focus {
     background-color: $button-text-color;
     color: $base-color;
   }
+
   &:active {
     background-color: $button-text-color;
     color: $base-transparent-color;
@@ -20,10 +23,12 @@
   border: none;
   background-color: $button-modal-color;
   color: $base-color;
+
   &:hover,
   &:focus {
     background-color: $button-modal-hover-color;
   }
+
   &:active {
     background-color: $button-modal-active-color;
   }

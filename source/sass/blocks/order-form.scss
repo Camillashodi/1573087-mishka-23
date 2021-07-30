@@ -33,7 +33,8 @@
 .order-form__input-text {
   font-weight: normal;
   color: $text-input-color;
-   &:focus {
+
+  &:focus {
     color: $text-input-active-color;
   }
 }
@@ -41,12 +42,14 @@
 .order-form__textarea {
   font-weight: normal;
   color: $text-input-color;
-   &:focus {
+
+  &:focus {
     color: $text-textarea-color;
   }
 }
 
 .order-form__clarification {
   color: $text-description-color;
+
   @include font-styles($font-size-clarification, normal, $line-size-clarification);
 }

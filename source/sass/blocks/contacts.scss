@@ -1,13 +1,16 @@
 .contacts {
   @include font-styles($font-size-contacts, normal, $line-size-contacts);
+
   color: $text-description-color;
 }
+
 .contacts__wrapper {
   @include wrapper();
 }
 
 .contacts__title {
   color: $text-title-color;
+
   @include font-styles($font-size-contacts-title, bold, $line-size-contacts-title);
 }
 
@@ -15,6 +18,7 @@
   a {
     color: inherit;
     text-decoration-color: $mail-undelline-color;
+
     &:hover,
     &:focus,
     &:active {
@@ -23,4 +27,3 @@
     }
   }
 }
-
