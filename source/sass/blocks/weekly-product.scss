@@ -1,0 +1,28 @@
+.weekly-product__wrapper {
+  @include wrapper();
+}
+
+.weekly-product__category {
+  @include font-styles($font-size-week-category, bold, $line-size-week-category);
+  color: $weekly-category-color;
+}
+
+.weekly-product__name {
+  @include font-styles($font-size-section-title, bold, $line-size-section-title);
+  text-align: left;
+}
+
+.weekly-product__description {
+  @include font-styles($font-size-week-desc, normal, $line-size-week-desc);
+  color: $text-description-color;
+}
+
+.weekly-product__table {
+  @include font-styles($font-size-week-table, normal, $line-size-week-table);
+  color: $text-description-color;
+}
+
+.weekly-product__price {
+  @include font-styles($font-size-week-price, bold, $line-size-week-price);
+  color: $text-description-color;
+}

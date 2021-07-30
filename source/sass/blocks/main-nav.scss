@@ -1,0 +1,30 @@
+.main-nav {
+  @include font-styles($font-size-nav, bold, $line-size-nav);
+  position: relative;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.main-nav__list {
+  @include list-style-none();
+}
+
+.main-nav__item {
+  a {
+    color: $text-nav-color;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $text-nav-hover-color;
+    }
+
+    &:active {
+      color: $text-nav-active-color;
+    }
+  }
+}

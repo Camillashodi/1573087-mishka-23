@@ -1,0 +1,8 @@
+.page-footer {
+  @include font-styles($font-size-footer, bold, $line-size-footer);
+  background-color: $base-second-color;
+}
+
+.page-footer__wrapper {
+  @include wrapper();
+}

@@ -1,0 +1,37 @@
+.types-of-goods__wrapper {
+  @include wrapper;
+}
+
+.types-of-goods__description {
+  @include font-styles($font-size-types-desc, bold, $line-size-types-desc);
+  text-align: center;
+}
+
+.types-of-goods__list {
+  @include list-style-none();
+}
+
+.types-of-goods__item--decor {
+  background-color: $types-menu-decor-color;
+
+  &:hover,
+  &:focus {
+    background-color: $types-decor-hover-color;
+  }
+}
+
+.types-of-goods__item--toys {
+  background-color: $types-menu-toys-color;
+
+  &:hover,
+  &:focus {
+    background-color: $types-toys-hover-color;
+  }
+}
+
+.types-of-goods__link {
+  color: $types-menu-text-color;
+  text-decoration: none;
+
+  @include font-styles($font-size-types, bold, $line-size-types);
+}

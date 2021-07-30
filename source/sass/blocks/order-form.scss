@@ -1,0 +1,55 @@
+.order-form {
+  @include font-styles($font-size-form, bold, $line-size-form);
+}
+
+.order-form__wrapper {
+  @include wrapper();
+}
+
+.order-form__fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.order-form__legend {
+  @include font-styles($font-size-legend, bold, $line-size-legend);
+  color: $text-legend-color;
+  text-transform: uppercase;
+}
+
+.order-form__radio-list {
+  @include list-style-none();
+}
+
+.order-form__checkbox-list {
+  @include list-style-none();
+}
+
+.order-form__text-list {
+  @include list-style-none();
+}
+
+.order-form__input-text {
+  font-weight: normal;
+  color: $text-input-color;
+
+  &:focus {
+    color: $text-input-active-color;
+  }
+}
+
+.order-form__textarea {
+  font-weight: normal;
+  color: $text-input-color;
+
+  &:focus {
+    color: $text-textarea-color;
+  }
+}
+
+.order-form__clarification {
+  color: $text-description-color;
+
+  @include font-styles($font-size-clarification, normal, $line-size-clarification);
+}

@@ -1,0 +1,11 @@
+.making__title {
+  color: $text-title-color;
+
+  @include font-styles($font-size-making-title, bold, $line-size-making-title);
+}
+
+.making__text {
+  color: $text-description-color;
+
+  @include font-styles($font-size-making, normal, $line-size-making);
+}

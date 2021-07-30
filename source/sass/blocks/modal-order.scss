@@ -1,0 +1,29 @@
+.modal-order {
+  color: $text-description-color;
+}
+
+.modal-order__wrapper {
+  @include wrapper();
+}
+
+.modal-order__title {
+  @include font-styles($font-size-section-title, bold, $line-size-section-title);
+  text-align: center;
+  text-transform: uppercase;
+  color: $text-title-color;
+}
+
+.modal-form__fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-form__legend {
+  @include font-styles($font-size-modal, normal, $line-size-modal);
+}
+
+.modal-form__checkbox-list {
+  @include list-style-none;
+  @include font-styles($font-size-modal-size, bold, $line-size-modal-size);
+}
