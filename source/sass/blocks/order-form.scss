@@ -21,18 +21,22 @@
   border: none;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 .order-form__group {
   display: flex;
   flex-direction: column;
   margin-bottom: 33px;
+  position: relative;
 }
 
 @media (min-width: $tablet-width) {
   .order-form__group {
-    display: grid;
-    grid-template-columns: 167px 1fr;
+    //display: grid;
+    //grid-template-columns: 169px 1fr;
+    display: block;
+    padding-left: 169px;
   }
 }
 
@@ -44,11 +48,12 @@
 
 @media (min-width: $tablet-width) {
   .order-form__legend {
-    align-self: baseline;
+    position: absolute;
+    left: 0;
   }
 
   .order-form__legend--single {
-    align-self: center;
+    top: 35%;
   }
 }
 

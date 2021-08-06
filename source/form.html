@@ -32,19 +32,19 @@
             <li class="main-nav__item">
               <a class="main-nav__link" href="form.html">Вязание на заказ</a>
             </li>
-            <li class="main-nav__item">
+            <li class="main-nav__item main-nav__item--add">
               <a class="main-nav__link" href="#">Новые поступления</a>
             </li>
-            <li class="main-nav__item">
+            <li class="main-nav__item main-nav__item--add">
               <a class="main-nav__link" href="#">Распродажа</a>
             </li>
-            <li class="main-nav__item">
+            <li class="main-nav__item main-nav__item--search">
               <a class="main-nav__link" href="#">
                 <svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity=".2" d="M17.7 16l-3.5-3.4A7.8 7.8 0 008 0 7.8 7.8 0 000 7.9c0 4.4 3.5 7.8 7.9 7.8 1.7 0 3.3-.6 4.7-1.5l3.5 3.5c.2.2.4.3.8.3.6 0 1.1-.5 1.1-1.1l-.3-.8zM2.3 8c0-3 2.5-5.7 5.6-5.7 3 0 5.6 2.6 5.6 5.7 0 3-2.6 5.6-5.6 5.6-3 0-5.7-2.6-5.7-5.6z" fill="#000"/></svg>
                 <span>Поиск по сайту</span>
               </a>
             </li>
-            <li class="main-nav__item">
+            <li class="main-nav__item main-nav__item--cart">
               <a class="main-nav__link" href="#">
                 <svg width="20" height="19" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity=".2" d="M19.2 7.2h-3.4L12.6.4c-.2-.4-.6-.5-1-.3s-.5.6-.3 1l3 6.1H5.5l3-6c.2-.5 0-.9-.3-1.1-.4-.2-.8 0-1 .3L4 7.2H.8c-.4 0-.8.3-.8.8 0 .4.3.8.8.8H1l.8 3c-.2.2-.3.4-.3.7 0 .4.3.7.7.7L4 19H16l1.7-5.8c.4 0 .7-.3.7-.7 0-.2-.1-.5-.3-.6l.8-3h.2c.4 0 .8-.4.8-.9s-.4-.8-.8-.8zM15 17.4h-10L3.6 13H16L15 17.4zm1.5-5.8H3.2l-.8-2.9h14.8l-.8 2.9z" fill="#000"/></svg>
                 <span>Корзина: пока пуста</span>
@@ -76,42 +76,42 @@
         >
           <div class="order-form__wrapper">
             <fieldset class="order-form__fieldset">
-              <div class="order-form__group">
                 <legend class="order-form__legend">ТИП</legend>
-                <ul class="order-form__radio-list">
-                  <li class="order-form__radio-item">
-                    <input
-                      type="radio"
-                      class="order-form__radio-button"
-                      name="typeOfGood"
-                      id="accessory"
-                      value="accessory"
-                      checked
-                    />
-                    <label for="accessory" class="order-form__label"
-                      >Аксессуар для интерьера</label
-                    >
-                  </li>
-                  <li class="order-form__radio-item">
-                    <input
-                      type="radio"
-                      class="order-form__radio-button"
-                      name="typeOfGood"
-                      id="toy"
-                      value="toy"
-                    />
-                    <label for="toy" class="order-form__label"
-                      >Детская игрушка</label
-                    >
-                  </li>
-                </ul>
-              </div>
+                <div class="order-form__group">
+                  <ul class="order-form__radio-list">
+                    <li class="order-form__radio-item">
+                      <input
+                        type="radio"
+                        class="order-form__radio-button"
+                        name="typeOfGood"
+                        id="accessory"
+                        value="accessory"
+                        checked
+                      />
+                      <label for="accessory" class="order-form__label"
+                        >Аксессуар для интерьера</label
+                      >
+                    </li>
+                    <li class="order-form__radio-item">
+                      <input
+                        type="radio"
+                        class="order-form__radio-button"
+                        name="typeOfGood"
+                        id="toy"
+                        value="toy"
+                      />
+                      <label for="toy" class="order-form__label"
+                        >Детская игрушка</label
+                      >
+                    </li>
+                  </ul>
+                </div>
             </fieldset>
           </div>
           <div class="order-form__wrapper order-form__wrapper--fill">
             <fieldset class="order-form__fieldset">
+              <legend class="order-form__legend">Цвет</legend>
               <div class="order-form__group">
-                <legend class="order-form__legend">Цвет</legend>
                 <ul class="order-form__checkbox-list">
                   <li class="order-form__checkbox-item">
                     <input
@@ -179,8 +179,8 @@
           </div>
           <div class="order-form__wrapper">
             <fieldset class="order-form__fieldset">
+              <legend class="order-form__legend">ФИО</legend>
               <div class="order-form__group">
-                <legend class="order-form__legend">ФИО</legend>
                 <ul class="order-form__text-list">
                   <li class="order-form__text-item">
                     <label for="customerName" class="order-form__label"
@@ -280,7 +280,7 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <a class="page-footer__logo">
+        <a href="index.html" class="page-footer__logo">
           <img src="img/content/logo-footer.svg" alt="Магазин «Мишка»" />
         </a>
         <div class="page-footer__social social">
