@@ -1,10 +1,51 @@
+@media (min-width: $tablet-width) {
+  .catalog {
+    margin-top: 67px;
+  }
+}
+
 .catalog__list {
   @include list-style-none();
 }
 
+.catalog__item {
+  display: grid;
+  grid-template-areas:
+    "image"
+    "title"
+    "description"
+    "order";
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border-bottom: $catalog-border;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog__item {
+    grid-template-areas:
+      "image title"
+      "image description"
+      "image order";
+    grid-template-rows: min-content min-content 1fr;
+    align-items: start;
+    margin-top: 0;
+    border-top: $catalog-border;
+
+    &:not(:first-child) {
+      margin-top: 55px;
+    }
+  }
+}
+
+
 .catalog__title-link {
   text-decoration: none;
   color: $text-title-color;
+  grid-area: title;
+  margin-top: 27px;
+  margin-bottom: 6px;
+  padding: 0 28px;
+
 
   &:hover,
   &:focus {
@@ -17,15 +58,54 @@
 }
 
 .catalog__product-name {
-  @include font-styles($font-size-product, bold, $line-size-product);
+  @include font-styles(var(--font-size-product), bold, var(--line-size-product));
+  margin: 0;
+  padding: 0;
+}
+
+.catalog__image-link {
+  grid-area: image;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog__image-link {
+    img {
+      display: block;
+      height: 334px;
+      width: 334px;
+    }
+  }
 }
 
 .catalog__product-description {
   color: $text-description-color;
+  grid-area: description;
+  margin: 0;
+  padding: 0 28px;
+  margin-bottom: 18px;
 
-  @include font-styles($font-size-product-desc, normal, $line-size-product-desc);
+  @include font-styles(var(--font-size-product-desc), normal, var(--line-size-product-desc));
+}
+
+.catalog__order {
+  grid-area: order;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 28px;
+  border-top: $catalog-border;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog__order {
+    align-self: end;
+  }
 }
 
 .catalog__product-price {
-  @include font-styles($font-size-product-price, bold, $line-size-product-price);
+  @include font-styles(var(--font-size-product-price), bold, var(--line-size-product-price));
+}
+
+.catalog__order-button {
+  padding: 22px;
 }

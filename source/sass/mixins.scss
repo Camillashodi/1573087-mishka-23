@@ -1,6 +1,7 @@
 @mixin wrapper () {
-  width: $wrapper-width;
-  padding: 0 $wrapper-padding;
+  width: var(--wrapper-width);
+  padding-left: var(--wrapper-padding);
+  padding-right: var(--wrapper-padding);
   margin: 0 auto;
 }
 

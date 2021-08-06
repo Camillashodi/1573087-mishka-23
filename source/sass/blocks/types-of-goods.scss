@@ -1,14 +1,39 @@
+.types-of-goods {
+  background: url("../img/backgrounds/type-of-goods-light.jpg") no-repeat;
+  background-color: $background-type-color;
+  background-position: 50% -10%;
+}
+
 .types-of-goods__wrapper {
   @include wrapper;
 }
 
 .types-of-goods__description {
-  @include font-styles($font-size-types-desc, bold, $line-size-types-desc);
+  @include font-styles(var(--font-size-types-desc), bold, var(--line-size-types-desc));
   text-align: center;
+  padding: 0;
+  margin: 0;
+  padding-top: 73px;
+  padding-bottom: 120px;
+}
+
+@media (min-width: $tablet-width) {
+  .types-of-goods__description {
+    padding-top: 154px;
+    padding-bottom: 372px;
+  }
 }
 
 .types-of-goods__list {
   @include list-style-none();
+}
+
+@media (min-width: $tablet-width) {
+  .types-of-goods__list {
+    @include wrapper();
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .types-of-goods__item--decor {
@@ -32,6 +57,27 @@
 .types-of-goods__link {
   color: $types-menu-text-color;
   text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  //gap: 90px;
+  padding-top: 24px;
+  padding-bottom: 31px;
 
-  @include font-styles($font-size-types, bold, $line-size-types);
+  span {
+    width: 130px;
+  }
+
+  @include wrapper();
+  @include font-styles(var(--font-size-types), bold, var(--line-size-types));
+}
+
+@media (min-width: $tablet-width) {
+  .types-of-goods__link {
+    width: auto;
+    padding-top: 25px;
+    padding-bottom: 46px;
+    padding-left: 36px;
+    padding-right: 35px;
+    margin: 0;
+  }
 }

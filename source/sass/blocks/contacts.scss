@@ -1,17 +1,91 @@
 .contacts {
-  @include font-styles($font-size-contacts, normal, $line-size-contacts);
+  @include font-styles(var(--font-size-contacts), normal, var(--line-size-contacts));
 
   color: $text-description-color;
+  margin-bottom: 40px;
+
+  iframe {
+    width: 100%;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 22px;
+    margin-top: 46px;
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include wrapper();
+    margin-bottom: 105px;
+    display: grid;
+    grid-template-columns: 175px 1fr 527px;
+    grid-template-rows: auto auto;
+
+    iframe {
+      grid-column-start: 3;
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+  }
 }
 
 .contacts__wrapper {
   @include wrapper();
+
+  @media (min-width: $tablet-width) {
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    margin: 0;
+    width: auto;
+    grid-column-start: 2;
+    text-align: left;
+  }
 }
 
 .contacts__title {
   color: $text-title-color;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 28px;
 
-  @include font-styles($font-size-contacts-title, bold, $line-size-contacts-title);
+  @include font-styles(var(--font-size-contacts-title), bold, var(--line-size-contacts-title));
+}
+
+@media (min-width: $tablet-width) {
+  .contacts__title {
+    margin-bottom: 49px;
+    text-align: start;
+  }
+}
+
+.contacts__table {
+  margin-bottom: 62px;
+
+  td:first-child {
+    padding-right: 32px;
+    white-space: nowrap;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    margin-bottom: 50px;
+    text-align: start;
+
+    tbody {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    td {
+      vertical-align: top;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
 }
 
 .contacts__email {
@@ -25,5 +99,21 @@
       color: $mail-hover-color;
       text-decoration-color: $mail-hover-color;
     }
+  }
+}
+
+.contacts__write-button {
+  display: block;
+  margin-top: 40px;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts__write-button {
+    margin-top: 55px;
+    display: inline-block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 26px;
+    padding-right: 28px;
   }
 }

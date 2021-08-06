@@ -1,3 +1,17 @@
 .social__list {
   @include list-style-none;
+  border-bottom: 1px solid $footer-border;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
+}
+
+.social__link {
+  padding: 20px;
+  display: block;
 }

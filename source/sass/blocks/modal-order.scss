@@ -1,16 +1,37 @@
 .modal-order {
   color: $text-description-color;
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+  border: 1px solid #c6c6c6;
+}
+
+@media (min-width: $tablet-width) {
+  .modal-order {
+    width: 566px;
+  }
 }
 
 .modal-order__wrapper {
   @include wrapper();
+  padding-top: 28px;
+}
+
+@media (min-width: $tablet-width) {
+  .modal-order__wrapper {
+    width: 350px;
+    padding-left: 108px;
+    padding-right: 108px;
+    margin: 0 auto;
+  }
 }
 
 .modal-order__title {
-  @include font-styles($font-size-section-title, bold, $line-size-section-title);
+  @include font-styles(var(--font-size-section-title), bold, var(--line-size-section-title));
   text-align: center;
   text-transform: uppercase;
   color: $text-title-color;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 14px;
 }
 
 .modal-form__fieldset {
@@ -20,10 +41,40 @@
 }
 
 .modal-form__legend {
-  @include font-styles($font-size-modal, normal, $line-size-modal);
+  @include font-styles(var(--font-size-modal), normal, var(--line-size-modal));
+  display: inline-block;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 .modal-form__checkbox-list {
   @include list-style-none;
-  @include font-styles($font-size-modal-size, bold, $line-size-modal-size);
+  @include font-styles(var(--font-size-modal-size), bold, var(--line-size-modal-size));
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-form__checkbox-item {
+  label {
+    padding: 18px 34px;
+    border: $modal-label-border;
+    box-sizing: border-box;
+    display: block;
+  }
+
+  &:not(:last-child) {
+    margin-right: 5px;
+  }
+}
+
+.modal-form__checkbox-input {
+  display: none;
+}
+
+.modal-form__button {
+  display: block;
+  width: 100%;
+  margin-bottom: 46px;
 }

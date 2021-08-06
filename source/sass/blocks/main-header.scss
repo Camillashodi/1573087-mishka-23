@@ -1,5 +1,14 @@
 .main-header {
   background-color: $base-second-color;
+  border-top: 1px solid transparent;
+  padding-top: 74px;
+  padding-bottom: 74px;
+}
+
+@media (min-width: $tablet-width) {
+  .main-header {
+    padding-top: 100px;
+  }
 }
 
 .main-header__wrapper {
@@ -7,5 +16,8 @@
 }
 
 .main-header__title {
-  @include font-styles($font-size-header-title, bold, $line-size-header-title);
+  @include font-styles(var(--font-size-header-title), bold, var(--line-size-header-title));
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
