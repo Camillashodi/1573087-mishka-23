@@ -1,8 +1,22 @@
+.order-choice {
+  margin-top: 17px;
+  margin-bottom: 55px;
+}
+
+@media (min-width: $tablet-width) {
+  .order-choice {
+    margin-bottom: 0;
+  }
+}
+
 .order-choice__wrapper {
   @include wrapper();
 }
 
 .order-choice__text {
-  @include font-styles($font-size-form-desc, normal, $line-size-form-desc);
+  @include font-styles(var(--font-size-form-desc), normal, var(--line-size-form-desc));
   color: $text-description-color;
+  margin: 0;
+  margin-bottom: 29px;
+  padding: 0;
 }

@@ -1,9 +1,27 @@
 .features {
-  @include font-styles($font-size-features, bold, $line-size-features);
+  @include font-styles(var(--font-size-features), bold, var(--line-size-features));
+  padding-top: 31px;
+  margin-bottom: 58px;
+}
+
+@media (min-width: $tablet-width) {
+  .features {
+    padding-top: 55px;
+    margin-bottom: 83px;
+  }
 }
 
 .features__title {
-  @include font-styles($font-size-section-title, bold, $line-size-section-title);
+  @include font-styles(var(--font-size-section-title), bold, var(--line-size-section-title));
+  padding: 0;
+  margin: 0;
+  margin-bottom: 28px;
+}
+
+@media (min-width: $tablet-width) {
+  .features__title {
+    margin-bottom: 40px;
+  }
 }
 
 .features__wrapper {
@@ -12,4 +30,37 @@
 
 .features__list {
   @include list-style-none;
+}
+
+@media (min-width: $tablet-width) {
+  .features__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+
+.features__col {
+  margin: 0;
+  padding: 0;
+}
+
+.features__col:first-child {
+  margin-bottom: 32px;
+}
+
+@media (min-width: $tablet-width) {
+  .features__col {
+    margin-bottom: 0;
+  }
+}
+
+.features__item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
 }
