@@ -22,7 +22,7 @@
   position: absolute;
   width: 20px;
   height: 14px;
-  left: 85%;
+  left: calc(50% + (var(--wrapper-width) / 2) - 20px);
   top: -45px;
   border: none;
   outline: none;

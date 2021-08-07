@@ -4,6 +4,12 @@
 
 .order-form__wrapper {
   @include wrapper();
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -17,11 +23,17 @@
   }
 }
 
-.order-form__fieldset {
+.order-form__fieldset,
+.order-form__contacts,
+.order-form__comment {
   border: none;
   margin: 0;
   padding: 0;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    @include wrapper();
+  }
 }
 
 .order-form__group {
@@ -49,11 +61,12 @@
 @media (min-width: $tablet-width) {
   .order-form__legend {
     position: absolute;
-    left: 0;
+    left: var(--wrapper-padding);
   }
 
   .order-form__legend--single {
-    top: 35%;
+    top: 22px;
+    left: 0;
   }
 }
 
@@ -158,6 +171,7 @@
 
 @media (min-width: $tablet-width) {
   .order-form__footer {
+    @include wrapper();
     display: grid;
     grid-template-columns: 230px 1fr max-content;
     align-items: baseline;

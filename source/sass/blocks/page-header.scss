@@ -19,7 +19,12 @@
   }
 
   @media (min-width: $tablet-width) {
-    @include wrapper ();
+    //@include wrapper ();
+    width: auto;
+    padding-left: 0;
+    z-index: 2;
+    position: absolute;
+    left: calc(50% - (var(--wrapper-width) / 2));
 
     img {
       margin-left: 0;
@@ -27,9 +32,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    img {
-      margin: 0 auto;
-    }
+    left: calc(50% - (var(--logo-width) / 2));
   }
 }
 
@@ -42,6 +45,7 @@
     box-shadow: $header-box-shadow, $header-box-shadow-up;
     width: 100%;
     padding: 0;
+    position: relative;
   }
 }
 
