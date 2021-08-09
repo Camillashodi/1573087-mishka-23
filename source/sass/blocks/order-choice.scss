@@ -19,4 +19,9 @@
   margin: 0;
   margin-bottom: 29px;
   padding: 0;
+
+  @media (min-width: $desktop-width) {
+    margin-left: 175px;
+    margin-right: 175px;
+  }
 }
