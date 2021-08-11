@@ -22,8 +22,8 @@
   position: absolute;
   width: 20px;
   height: 14px;
-  left: calc(50% + (var(--wrapper-width) / 2) - 20px);
-  top: -45px;
+  left: calc(50% + (var(--wrapper-width) / 2) - 21px);
+  top: -47px;
   border: none;
   outline: none;
   background-color: $base-color;
@@ -33,6 +33,12 @@
   @media (min-width: $tablet-width) {
     display: none;
   }
+}
+
+.main-nav__toggle--active {
+  background-image: url("../img/icons/menu-close.svg");
+  background-size: contain;
+  height: 20px;
 }
 
 .main-nav__list {
@@ -45,7 +51,7 @@
 
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: 24% 24% 82px 1fr;
+    grid-template-columns: 25% 23% 82px 1fr;
     grid-template-rows: 89px auto;
     align-items: center;
     position: static;
@@ -58,8 +64,15 @@
   }
 }
 
-.main-nav__list--active {
-  display: block;
+@media (max-width: $mobile-width-only) {
+  .main-nav__list--active {
+    display: block;
+  }
+
+  .main-nav__list--nojs {
+    display: block;
+    position: static;
+  }
 }
 
 .main-nav__item {
@@ -72,6 +85,16 @@
 
   @media (min-width: $desktop-width) {
     grid-row-start: 1;
+
+    @include font-styles(var(--font-size-nav-big), bold, var(--line-size-nav-big));
+
+    &:nth-child(2) {
+      margin-left: 35px;
+    }
+
+    &:nth-child(4) {
+      margin-left: 35px;
+    }
   }
 }
 
@@ -82,6 +105,8 @@
 
   @media (min-width: $desktop-width) {
     grid-row-start: 2;
+
+    @include font-styles(var(--font-size-nav), bold, var(--line-size-nav));
   }
 }
 
@@ -128,8 +153,11 @@
     grid-row-start: 1;
     justify-self: end;
 
+    @include font-styles(var(--font-size-nav-big), bold, var(--line-size-nav-big));
+
     svg {
-      padding-right: 32px;
+      padding-right: 26px;
+      vertical-align: top;
     }
   }
 
@@ -153,8 +181,8 @@
 
   svg {
     position: absolute;
-    left: 25px;
-    top: 28px;
+    left: 30px;
+    top: 30px;
   }
 
   &:hover,
@@ -169,6 +197,11 @@
 
   &:active {
     color: $text-nav-active-color;
+
+    path {
+      fill: $button-modal-color;
+      opacity: 0.3;
+    }
   }
 
   @media (min-width: $tablet-width) {

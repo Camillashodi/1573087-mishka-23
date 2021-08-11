@@ -13,7 +13,18 @@
 }
 
 .copyright__link {
-  margin-left: 27px;
+  margin-left: 23px;
+
+  &:hover,
+  &:focus {
+    path {
+      fill: $mail-hover-color;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copyright__text {

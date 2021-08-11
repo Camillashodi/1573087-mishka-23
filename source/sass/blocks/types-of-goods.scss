@@ -2,6 +2,27 @@
   background: url("../img/backgrounds/type-of-goods-light.jpg") no-repeat;
   background-color: $background-type-color;
   background-position: 50% -10%;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    background-size: contain;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 24px;
+      width: 100%;
+      background: url("../img/icons/zigzag-fill.svg") repeat-x bottom;
+      bottom: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      height: 34px;
+      bottom: 0;
+    }
+  }
 }
 
 .types-of-goods__wrapper {
@@ -15,24 +36,45 @@
   margin: 0;
   padding-top: 73px;
   padding-bottom: 120px;
-}
 
-@media (min-width: $tablet-width) {
-  .types-of-goods__description {
+  @media (min-width: $tablet-width) {
     padding-top: 154px;
     padding-bottom: 372px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 156px;
+    padding-bottom: 355px;
   }
 }
 
 .types-of-goods__list {
   @include list-style-none();
-}
 
-@media (min-width: $tablet-width) {
-  .types-of-goods__list {
+  @media (min-width: $tablet-width) {
     @include wrapper();
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      height: 34px;
+      width: 100%;
+      background-position: center;
+    }
+  }
+}
+
+.types-of-goods__item {
+  &:hover,
+  &:focus-within {
+    transform: scaleY(1.04);
+
+    @media (min-width: $tablet-width) {
+      transform: translateY(-2px);
+    }
   }
 }
 
@@ -40,7 +82,7 @@
   background-color: $types-menu-decor-color;
 
   &:hover,
-  &:focus {
+  &:focus-within {
     background-color: $types-decor-hover-color;
   }
 }
@@ -49,7 +91,7 @@
   background-color: $types-menu-toys-color;
 
   &:hover,
-  &:focus {
+  &:focus-within {
     background-color: $types-toys-hover-color;
   }
 }
@@ -59,9 +101,13 @@
   text-decoration: none;
   display: flex;
   justify-content: space-between;
-  //gap: 90px;
-  padding-top: 24px;
-  padding-bottom: 31px;
+  padding-top: 25px;
+  padding-bottom: 17px;
+
+  &:focus,
+  &:hover {
+    transform: translateY(-5px);
+  }
 
   span {
     width: 130px;
@@ -74,8 +120,8 @@
 @media (min-width: $tablet-width) {
   .types-of-goods__link {
     width: auto;
-    padding-top: 25px;
-    padding-bottom: 46px;
+    padding-top: 26px;
+    padding-bottom: 44px;
     padding-left: 36px;
     padding-right: 35px;
     margin: 0;

@@ -1,14 +1,16 @@
 .reviews {
   @include font-styles(var(--font-size-reviews), normal, var(--line-size-reviews));
   color: $text-description-color;
-  margin-bottom: 45px;
-}
+  padding-bottom: 47px;
+  background: url("../img/icons/zigzag-line.svg") repeat-x bottom;
 
-@media (min-width: $tablet-width) {
-  .reviews {
-    padding-top: 83px;
+  @media (min-width: $tablet-width) {
     margin-bottom: 0;
-    padding-bottom: 85px;
+    padding-bottom: 5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 60px;
   }
 }
 
@@ -22,6 +24,9 @@
       "review review";
     grid-template-columns: 1fr 175px;
     position: relative;
+    padding-top: 81px;
+    padding-bottom: 133px;
+    background: url("../img/backgrounds/review-background.jpg") no-repeat 0 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -30,6 +35,8 @@
       "gap review review";
     grid-template-columns: 175px 1fr 175px;
     position: relative;
+    background-position: var(--wrapper-padding) 0;
+    padding-top: 78px;
   }
 }
 
@@ -39,12 +46,16 @@
   margin: 0;
   padding: 0;
   margin-bottom: 14px;
-}
 
-@media (min-width: $tablet-width) {
-  .reviews__title {
+  @media (min-width: $tablet-width) {
     grid-area: title;
     margin-bottom: 38px;
+    padding-top: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 35px;
+    padding-top: 0;
   }
 }
 
@@ -57,7 +68,7 @@
 .reviews__body {
   padding: 0;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
 @media (min-width: $tablet-width) {
@@ -69,12 +80,14 @@
 .reviews__text {
   margin: 0;
   padding: 0;
-  margin-bottom: 33px;
-}
+  margin-bottom: 31px;
 
-@media (min-width: $tablet-width) {
-  .reviews__text {
-    margin-bottom: 61px;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 58px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 42px;
   }
 }
 
@@ -92,6 +105,10 @@
   color: $text-title-color;
 }
 
+.reviews__author-email {
+  display: block;
+}
+
 .reviews__button-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -101,7 +118,7 @@
 @media (min-width: $tablet-width) {
   .reviews__button-wrapper {
     position: absolute;
-    bottom: -13px;
+    bottom: 129px;
     right: 69px;
     grid-template-columns: 50px 50px;
     gap: 37px;
@@ -113,9 +130,18 @@
 .reviews__prev {
   outline-style: none;
   border: 1px solid $table-border;
-  padding: 13px 0;
+  padding: 11px 0;
   margin: 0;
   background-color: $base-color;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {
