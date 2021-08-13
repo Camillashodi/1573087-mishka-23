@@ -1,11 +1,12 @@
 .types-of-goods {
   background: url("../img/backgrounds/type-of-goods-light.jpg") no-repeat;
   background-color: $background-type-color;
-  background-position: 50% -10%;
+  background-position: 50% -17px;
   position: relative;
 
   @media (min-width: $tablet-width) {
-    background-size: contain;
+    background: url("../img/backgrounds/type-of-goods.jpg") no-repeat;
+    background-position: 50% 0;
 
     &::after {
       content: "";
@@ -18,9 +19,14 @@
   }
 
   @media (min-width: $desktop-width) {
+    background: url("../img/backgrounds/type-of-goods-desk.jpg") no-repeat;
+    background-color: $background-type-color;
+    background-position: 50% -10%;
+
     &::after {
       height: 34px;
-      bottom: 0;
+      bottom: -5px;
+      background-size: 1250px 34px;
     }
   }
 }
@@ -43,7 +49,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 156px;
+    padding-top: 157px;
     padding-bottom: 355px;
   }
 }
@@ -85,6 +91,19 @@
   &:focus-within {
     background-color: $types-decor-hover-color;
   }
+
+  svg {
+    position: relative;
+    right: 5px;
+    top: -2px;
+  }
+
+  @media (min-width: $tablet-width) {
+    svg {
+      top: 3px;
+      left: -1px;
+    }
+  }
 }
 
 .types-of-goods__item--toys {
@@ -93,6 +112,19 @@
   &:hover,
   &:focus-within {
     background-color: $types-toys-hover-color;
+  }
+
+  svg {
+    position: relative;
+    right: -4px;
+    top: -4px;
+  }
+
+  @media (min-width: $tablet-width) {
+    svg {
+      top: 6px;
+      left: 1px;
+    }
   }
 }
 

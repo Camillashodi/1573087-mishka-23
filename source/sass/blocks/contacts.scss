@@ -3,7 +3,7 @@
 
   color: $text-description-color;
   margin-bottom: 40px;
-  padding-top: 40px;
+  padding-top: 38px;
 
   iframe {
     width: 100%;
@@ -13,7 +13,7 @@
   @media (min-width: $tablet-width) {
     padding-top: 68px;
     margin-top: 0;
-    margin-bottom: 55px;
+    margin-bottom: 56px;
     position: relative;
 
     iframe {
@@ -34,6 +34,7 @@
 
   @media (min-width: $desktop-width) {
     @include wrapper();
+    padding-top: 70px;
     margin-bottom: 105px;
     display: grid;
     grid-template-columns: 175px 1fr 527px;
@@ -74,30 +75,32 @@
   color: $text-title-color;
   margin: 0;
   padding: 0;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 
   @include font-styles(var(--font-size-contacts-title), bold, var(--line-size-contacts-title));
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 45px;
+    margin-bottom: 49px;
     text-align: start;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 80px;
-    margin-bottom: 33px;
+    margin-top: 79px;
+    margin-bottom: 35px;
   }
 }
 
 .contacts__table {
   margin-bottom: 32px;
+  border-collapse: collapse;
 
   td {
-    padding-bottom: 27px;
+    padding: 0;
+    padding-bottom: 30px;
   }
 
   td:first-child {
-    padding-right: 26px;
+    padding-right: 32px;
     white-space: nowrap;
     vertical-align: top;
   }
@@ -114,30 +117,62 @@
     td {
       vertical-align: top;
     }
+
+    td:first-child {
+      padding-right: 24px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     margin: 0;
     margin-bottom: 54px;
 
+    td {
+      padding-bottom: 30px;
+    }
+
     td:first-child {
-      padding-right: 18px;
+      padding-right: 23px;
     }
   }
 }
 
 .contacts__email-link {
   color: inherit;
-  text-decoration-color: $mail-undelline-color;
+  position: relative;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: $mail-undelline-color;
+    left: 0;
+    bottom: -4px;
+  }
 
   &:hover,
   &:focus {
     color: $mail-hover-color;
-    text-decoration-color: $mail-hover-color;
   }
 
-  &:active {
-    text-decoration-color: rgba($mail-hover-color, 0.1);
+  &:hover::after {
+    background-color: $mail-hover-color;
+  }
+
+  &:focus::after {
+    background-color: $mail-hover-color;
+  }
+
+  &:active::after {
+    background-color: rgba($mail-hover-color, 0.1);
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      bottom: -9px;
+    }
   }
 }
 
@@ -150,7 +185,8 @@
     display: inline-block;
     margin-right: auto;
     margin-left: auto;
-    padding-left: 34px;
-    padding-right: 34px;
+    padding-left: 38px;
+    padding-right: 38px;
+    font-size: 17px;
   }
 }

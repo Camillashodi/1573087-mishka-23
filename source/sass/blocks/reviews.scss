@@ -1,16 +1,18 @@
 .reviews {
   @include font-styles(var(--font-size-reviews), normal, var(--line-size-reviews));
   color: $text-description-color;
-  padding-bottom: 47px;
+  padding-bottom: 49px;
   background: url("../img/icons/zigzag-line.svg") repeat-x bottom;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
     padding-bottom: 5px;
+    background-size: 772px 17px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 60px;
+    padding-bottom: 58px;
+    background-size: 1050px 23px;
   }
 }
 
@@ -25,7 +27,7 @@
     grid-template-columns: 1fr 175px;
     position: relative;
     padding-top: 81px;
-    padding-bottom: 133px;
+    padding-bottom: 130px;
     background: url("../img/backgrounds/review-background.jpg") no-repeat 0 0;
   }
 
@@ -68,7 +70,7 @@
 .reviews__body {
   padding: 0;
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 32px;
 }
 
 @media (min-width: $tablet-width) {
@@ -107,12 +109,13 @@
 
 .reviews__author-email {
   display: block;
+  margin-top: 4px;
 }
 
 .reviews__button-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-bottom: 38px;
+  margin-bottom: 36px;
 }
 
 @media (min-width: $tablet-width) {

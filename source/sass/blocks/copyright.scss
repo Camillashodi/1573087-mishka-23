@@ -13,7 +13,7 @@
 }
 
 .copyright__link {
-  margin-left: 23px;
+  margin-left: 27px;
 
   &:hover,
   &:focus {
@@ -25,8 +25,14 @@
   &:active {
     opacity: 0.3;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 29px;
+  }
 }
 
 .copyright__text {
   vertical-align: bottom;
+  align-self: center;
+  padding-bottom: 3px;
 }

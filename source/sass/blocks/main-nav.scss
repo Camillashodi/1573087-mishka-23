@@ -88,6 +88,15 @@
 
     @include font-styles(var(--font-size-nav-big), bold, var(--line-size-nav-big));
 
+    &:nth-child(1) {
+      border-right: $header-border;
+      height: 100%;
+
+      .main-nav__link {
+        padding: 33px 0;
+      }
+    }
+
     &:nth-child(2) {
       margin-left: 35px;
     }
@@ -105,6 +114,10 @@
 
   @media (min-width: $desktop-width) {
     grid-row-start: 2;
+
+    .main-nav__link {
+      padding-top: 19px;
+    }
 
     @include font-styles(var(--font-size-nav), bold, var(--line-size-nav));
   }
@@ -139,6 +152,10 @@
       clip: rect(0 0 0 0);
       overflow: hidden;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column-start: 4;
   }
 
   @media (min-width: $desktop-width) {

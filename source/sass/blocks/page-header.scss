@@ -5,6 +5,7 @@
   @media (min-width: $tablet-width) {
     box-shadow: none;
     margin-bottom: -64px;
+    position: relative;
   }
 }
 
@@ -66,10 +67,19 @@
 
   @media (min-width: $tablet-width) {
     @include wrapper();
-    display: block;
+    display: inline-block;
     padding-bottom: 20px;
-    margin-top: -44px;
+    //margin-top: -44px;
     text-align: right;
-    position: relative;
+    width: 266px;
+    position: absolute;
+    z-index: 2;
+    top: 109px;
+    left: calc(50% + 68px);
+    padding-left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: calc(50% + 258px);
   }
 }

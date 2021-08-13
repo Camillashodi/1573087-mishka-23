@@ -6,6 +6,7 @@
   border: 1px solid #c6c6c6;
   position: absolute;
   top: 1046px;
+  z-index: 5;
 
   @media (min-width: $tablet-width) {
     top: 1532px;

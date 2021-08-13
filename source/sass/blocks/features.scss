@@ -4,8 +4,8 @@
   margin-bottom: 56px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 54px;
-    margin-bottom: 44px;
+    padding-top: 57px;
+    margin-bottom: 46px;
   }
 
   @media (min-width: $desktop-width) {
@@ -18,10 +18,10 @@
   @include font-styles(var(--font-size-section-title), bold, var(--line-size-section-title));
   padding: 0;
   margin: 0;
-  margin-bottom: 29px;
+  margin-bottom: 36px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 40px;
+    margin-bottom: 49px;
   }
 
   @media (min-width: $desktop-width) {
@@ -50,6 +50,8 @@
 .features__col {
   margin: 0;
   padding: 0;
+
+  @include list-style-none;
 }
 
 .features__col:first-child {
@@ -63,17 +65,65 @@
 }
 
 .features__item {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  padding-top: 48px;
+  position: relative;
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 5px;
+  }
 
   &:not(:last-child) {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
   }
 
   @media (min-width: $tablet-width) {
     &:not(:last-child) {
-      margin-bottom: 70px;
+      margin-bottom: 63px;
     }
+  }
+}
+
+.features__item--eco {
+  svg {
+    top: -7px;
+    left: 7px;
+  }
+}
+
+.features__item--price {
+  svg {
+    top: -6px;
+    left: -1px;
+  }
+}
+
+
+.features__item--heart {
+  svg {
+    left: 7px;
+  }
+}
+
+.features__item--knitting {
+  svg {
+    top: -4px;
+    left: 2px;
+  }
+}
+
+.features__item--rocket {
+  svg {
+    top: -4px;
+    left: -5px;
+  }
+}
+
+
+.features__item--present {
+  svg {
+    top: -4px;
+    left: 2px;
   }
 }

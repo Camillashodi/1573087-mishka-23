@@ -1,12 +1,14 @@
 .social__list {
   @include list-style-none;
   border-bottom: 1px solid $footer-border;
+  padding-bottom: 4px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 
   @media (min-width: $tablet-width) {
+    padding-bottom: 0;
     border: none;
     justify-content: start;
   }

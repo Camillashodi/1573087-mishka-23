@@ -19,6 +19,10 @@
     background-color: $button-text-color;
     color: $base-transparent-color;
   }
+
+  @media (min-width: $tablet-width) {
+    @include font-styles(17px, bold, 20px);
+  }
 }
 
 .button--modal {
