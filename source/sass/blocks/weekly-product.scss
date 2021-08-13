@@ -1,12 +1,19 @@
 .weekly-product {
-  margin-bottom: 36px;
-}
+  margin-bottom: 0;
+  padding-bottom: 40px;
+  background: url("../img/icons/zigzag-line.svg") repeat-x bottom;
 
-@media (min-width: $tablet-width) {
-  .weekly-product {
+  @media (min-width: $tablet-width) {
     margin-top: 40px;
-    padding-bottom: 70px;
+    padding-bottom: 66px;
     margin-bottom: 0;
+    background-size: 772px 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 60px;
+    padding-bottom: 95px;
+    background-size: 1050px 23px;
   }
 }
 
@@ -23,7 +30,7 @@
       "table image image"
       "price image image"
       "button image image";
-    grid-template-columns: 295px 1fr min-content;
+    grid-template-columns: 292px 1fr min-content;
     justify-content: start;
   }
 
@@ -35,7 +42,8 @@
       "type table image"
       "type price image"
       "type button image";
-    grid-template-columns: 205px 262px 1fr;
+    grid-template-columns: 175px 290px 1fr;
+    grid-template-rows: min-content min-content min-content 1fr min-content;
     justify-content: start;
   }
 }
@@ -50,18 +58,22 @@
   @media (min-width: $tablet-width) {
     grid-area: type;
     justify-self: end;
-    align-self: center;
+    align-self: start;
     margin: 0;
+    padding-right: 27px;
+    padding-top: 5px;
     text-align: center;
   }
 
   @media (min-width: $desktop-width) {
-    justify-self: center;
+    justify-self: start;
     align-self: end;
     grid-row-end: 2;
     text-align: center;
-    padding: 0 43px;
-    padding-bottom: 7px;
+    padding: 0;
+    padding-left: 30px;
+    padding-right: 40px;
+    padding-bottom: 15px;
   }
 }
 
@@ -71,16 +83,19 @@
   order: -1;
   margin: 0;
   padding-top: 31px;
+  padding-bottom: 5px;
 
   @media (min-width: $tablet-width) {
     grid-area: title;
     padding-top: 0;
+    padding-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
     grid-column-end: 4;
     z-index: 1;
     align-self: end;
+    padding-top: 60px;
   }
 }
 
@@ -95,8 +110,16 @@
 @media (min-width: $tablet-width) {
   .weekly-product__description {
     grid-area: desc;
-    margin-top: 38px;
-    margin-bottom: 48px;
+    margin-top: 36px;
+    margin-bottom: 39px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .weekly-product__description {
+    grid-area: desc;
+    margin-top: 36px;
+    margin-bottom: 51px;
   }
 }
 
@@ -117,9 +140,19 @@
 
 .weekly-product__data {
   border-bottom: 1px solid $table-border;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 8px;
+  padding-bottom: 12px;
   padding-right: 27px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    padding-top: 8px;
+    padding-bottom: 12px;
+  }
 }
 
 .weekly-product__image {
@@ -158,14 +191,15 @@
   align-self: center;
   margin: 0;
   padding: 0;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 }
 
 @media (min-width: $tablet-width) {
   .weekly-product__price {
     grid-area: price;
-    margin-bottom: 33px;
+    margin-bottom: 32px;
     justify-self: center;
+    align-self: end;
   }
 }
 

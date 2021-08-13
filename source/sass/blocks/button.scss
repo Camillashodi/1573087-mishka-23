@@ -7,7 +7,7 @@
   box-sizing: border-box;
   text-transform: uppercase;
   text-align: center;
-  padding: 16px 0;
+  padding: 15px 0;
 
   &:hover,
   &:focus {
@@ -18,6 +18,10 @@
   &:active {
     background-color: $button-text-color;
     color: $base-transparent-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include font-styles(17px, bold, 20px);
   }
 }
 

@@ -1,13 +1,16 @@
 .features {
   @include font-styles(var(--font-size-features), bold, var(--line-size-features));
   padding-top: 31px;
-  margin-bottom: 58px;
-}
+  margin-bottom: 56px;
 
-@media (min-width: $tablet-width) {
-  .features {
-    padding-top: 55px;
-    margin-bottom: 83px;
+  @media (min-width: $tablet-width) {
+    padding-top: 57px;
+    margin-bottom: 46px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 67px;
+    margin-bottom: 52px;
   }
 }
 
@@ -15,12 +18,14 @@
   @include font-styles(var(--font-size-section-title), bold, var(--line-size-section-title));
   padding: 0;
   margin: 0;
-  margin-bottom: 28px;
-}
+  margin-bottom: 36px;
 
-@media (min-width: $tablet-width) {
-  .features__title {
-    margin-bottom: 40px;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 49px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 175px;
   }
 }
 
@@ -30,23 +35,27 @@
 
 .features__list {
   @include list-style-none;
-}
 
-@media (min-width: $tablet-width) {
-  .features__list {
+  @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 175px;
+    margin-right: 175px;
   }
 }
 
 .features__col {
   margin: 0;
   padding: 0;
+
+  @include list-style-none;
 }
 
 .features__col:first-child {
-  margin-bottom: 32px;
+  margin-bottom: 35px;
 }
 
 @media (min-width: $tablet-width) {
@@ -56,11 +65,65 @@
 }
 
 .features__item {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  padding-top: 48px;
+  position: relative;
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 5px;
+  }
 
   &:not(:last-child) {
-    margin-bottom: 32px;
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &:not(:last-child) {
+      margin-bottom: 63px;
+    }
+  }
+}
+
+.features__item--eco {
+  svg {
+    top: -7px;
+    left: 7px;
+  }
+}
+
+.features__item--price {
+  svg {
+    top: -6px;
+    left: -1px;
+  }
+}
+
+
+.features__item--heart {
+  svg {
+    left: 7px;
+  }
+}
+
+.features__item--knitting {
+  svg {
+    top: -4px;
+    left: 2px;
+  }
+}
+
+.features__item--rocket {
+  svg {
+    top: -4px;
+    left: -5px;
+  }
+}
+
+
+.features__item--present {
+  svg {
+    top: -4px;
+    left: 2px;
   }
 }

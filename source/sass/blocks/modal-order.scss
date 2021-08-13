@@ -1,7 +1,25 @@
 .modal-order {
+  display: none;
   color: $text-description-color;
+  background-color: $base-color;
   box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
   border: 1px solid #c6c6c6;
+  position: absolute;
+  top: 1046px;
+  z-index: 5;
+
+  @media (min-width: $tablet-width) {
+    top: 1532px;
+    left: calc(50% - 283px);
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 1114px;
+  }
+}
+
+.modal-order--active {
+  display: block;
 }
 
 @media (min-width: $tablet-width) {
@@ -62,6 +80,11 @@
     border: $modal-label-border;
     box-sizing: border-box;
     display: block;
+
+    &:focus-within,
+    &:hover {
+      border: $modal-label-border-hover;
+    }
   }
 
   &:not(:last-child) {
@@ -71,6 +94,10 @@
 
 .modal-form__checkbox-input {
   display: none;
+}
+
+.modal-form__checkbox-input:checked + label {
+  border: $modal-label-border-check;
 }
 
 .modal-form__button {
