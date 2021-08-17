@@ -102,10 +102,6 @@
     top: 17px;
     left: 0;
   }
-
-  .order-form__legend--text-inputs {
-    //padding-top: 20px;
-  }
 }
 
 @media (min-width: $desktop-width) {
@@ -298,7 +294,7 @@
   border: $modal-label-border-check;
 }
 
-.order-form__checkbox + .order-form__label--checkbox:active:before {
+.order-form__checkbox + .order-form__label--checkbox:active::before {
   border: $modal-label-border-hover;
 }
 
