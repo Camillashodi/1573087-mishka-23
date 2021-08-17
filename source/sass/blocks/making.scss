@@ -1,23 +1,28 @@
 .making {
-  margin-top: 30px;
+  margin-top: 31px;
   display: flex;
   flex-direction: column;
-  padding-bottom: 33px;
-  border-bottom: $catalog-border;
+  padding-top: 21px;
+  padding-bottom: 32px;
+  border: $catalog-border;
+  box-sizing: border-box;
   margin-bottom: 58px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 53px;
-    padding-bottom: 46px;
+    margin-top: 51px;
+    padding-bottom: 45px;
     margin-bottom: 64px;
+    padding-top: 0;
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-rows: min-content min-content minmax(min-content, 1fr);
-    grid-template-columns: 683px 80px 1fr;
+    grid-template-columns: 682px 78px 1fr;
     padding-bottom: 0;
     border-top: $catalog-border;
+    margin-top: 57px;
+    margin-bottom: 104px;
   }
 }
 
@@ -25,14 +30,18 @@
   color: $text-title-color;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 26px;
   padding: 0;
-  gap: 25px;
 
   span {
     width: min-content;
+    margin-left: 24px
+  }
+
+  svg {
+    margin-left: 33px;
   }
 
   @include font-styles(var(--font-size-making-title), bold, var(--line-size-making-title));
@@ -40,10 +49,13 @@
   @media (min-width: $tablet-width) {
     gap: 33px;
     justify-content: flex-start;
-    margin-left: 42px;
+    margin-left: 9px;
+    margin-bottom: 24px;
 
     span {
       width: max-content;
+      padding-top: 4px;
+      margin-left: 0;
     }
   }
 
@@ -52,17 +64,30 @@
     grid-row-start: 1;
     margin-left: 0;
     flex-wrap: wrap;
+    flex-direction: column;
     margin-top: 47px;
+    gap: 27px;
+    align-items: flex-start;
+    margin-bottom: 26px;
+
+    span {
+      padding-top: 0;
+      width: min-content;
+    }
+
+    svg {
+      margin-left: 0;
+    }
   }
 }
 
 .making__video {
-  margin-bottom: 35px;
+  margin-bottom: 26px;
   position: relative;
 
   @media (min-width: $tablet-width) {
     order: -1;
-    margin-bottom: 40px;
+    margin-bottom: 27px;
 
     img {
       width: 100%;
@@ -86,14 +111,32 @@
 
 .making__video-button {
   position: absolute;
-  top: 25%;
-  left: 30%;
+  top: 22%;
+  left: 28%;
   outline: none;
   border: none;
   background: none;
 
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    transform: scale(0.8);
+
+    path {
+      opacity: 0.3;
+    }
+  }
+
   @media (min-width: $tablet-width) {
-    top: 45%;
+    top: 40%;
+    left: 41%;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 41%;
     left: 42%;
   }
 }
@@ -101,27 +144,30 @@
 .making__text {
   color: $text-description-color;
   margin: 0;
-  margin-bottom: 41px;
+  margin-bottom: 40px;
   padding: 0;
-  margin-left: 34px;
+  margin-left: 33px;
 
   @include font-styles(var(--font-size-making), normal, var(--line-size-making));
 
   @media (min-width: $tablet-width) {
-    margin-left: 42px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 39px;
   }
 
   @media (min-width: $desktop-width) {
     grid-column-start: 3;
     grid-row-start: 2;
     margin-left: 0;
+    margin-bottom: 51px;
   }
 }
 
 .making__order {
   align-self: center;
-  padding-left: 22px;
-  padding-right: 22px;
+  padding-left: 20px;
+  padding-right: 20px;
 
   @media (min-width: $tablet-width) {
     padding-left: 220px;
@@ -131,7 +177,9 @@
   @media (min-width: $desktop-width) {
     grid-column-start: 3;
     grid-row-start: 3;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 44px;
+    padding-right: 44px;
+    align-self: start;
+    justify-self: start;
   }
 }
