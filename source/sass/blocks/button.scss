@@ -26,6 +26,8 @@
 }
 
 .button--modal {
+  @include font-styles(17px, bold, 16px);
+
   border: none;
   background-color: $button-modal-color;
   color: $base-color;

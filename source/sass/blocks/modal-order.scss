@@ -4,28 +4,21 @@
   background-color: $base-color;
   box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
   border: 1px solid #c6c6c6;
-  position: absolute;
-  top: 1046px;
+  //position: absolute;
+  //top: 1046px;
+  position: fixed;
+  top: calc(50% - 168px);
   z-index: 5;
 
   @media (min-width: $tablet-width) {
-    top: 1532px;
+    //top: 1532px;
     left: calc(50% - 283px);
-  }
-
-  @media (min-width: $desktop-width) {
-    top: 1114px;
+    width: 566px;
   }
 }
 
 .modal-order--active {
   display: block;
-}
-
-@media (min-width: $tablet-width) {
-  .modal-order {
-    width: 566px;
-  }
 }
 
 .modal-order__wrapper {
@@ -35,9 +28,10 @@
 
 @media (min-width: $tablet-width) {
   .modal-order__wrapper {
-    width: 350px;
-    padding-left: 108px;
-    padding-right: 108px;
+    width: 381px;
+    padding-top: 37px;
+    padding-left: 93px;
+    padding-right: 92px;
     margin: 0 auto;
   }
 }
@@ -49,7 +43,17 @@
   color: $text-title-color;
   margin: 0;
   padding: 0;
-  margin-bottom: 14px;
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    @include font-styles(var(--font-size-modal-title), bold, var(--line-size-modal-title));
+
+    margin-bottom: 11px;
+
+    br {
+      display: none;
+    }
+  }
 }
 
 .modal-form__fieldset {
@@ -76,7 +80,7 @@
 
 .modal-form__checkbox-item {
   label {
-    padding: 18px 34px;
+    padding: 17px 33px;
     border: $modal-label-border;
     box-sizing: border-box;
     display: block;
@@ -88,7 +92,17 @@
   }
 
   &:not(:last-child) {
-    margin-right: 5px;
+    margin-right: 7px;
+  }
+
+  @media (min-width: $tablet-width) {
+    label {
+      padding: 16px 48px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 7px;
+    }
   }
 }
 
@@ -104,4 +118,12 @@
   display: block;
   width: 100%;
   margin-bottom: 46px;
+  padding-top: 19px;
+  padding-bottom: 18px;
+
+  @media (min-width: $tablet-width) {
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

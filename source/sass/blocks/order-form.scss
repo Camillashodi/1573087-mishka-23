@@ -393,9 +393,14 @@
   @media (min-width: $tablet-width) {
     background-position: 95% 38%;
   }
+
+  @media (min-width: $desktop-width) {
+    background-position: 99% 38%;
+  }
 }
 
-.order-form__input-text--tel:hover {
+.order-form__input-text--tel:hover,
+.order-form__input-text--tel:focus {
   background-image: url("../img/icons/phone-hover.svg");
 }
 
@@ -407,9 +412,14 @@
   @media (min-width: $tablet-width) {
     background-position: 95% 49%;
   }
+
+  @media (min-width: $desktop-width) {
+    background-position: 99% 52%;
+  }
 }
 
-.order-form__input-text--mail:hover {
+.order-form__input-text--mail:hover,
+.order-form__input-text--mail:focus {
   background-image: url("../img/icons/mail-hover.svg");
 }
 
