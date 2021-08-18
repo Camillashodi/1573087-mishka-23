@@ -1,11 +1,14 @@
 .order-choice {
   margin-top: 17px;
   margin-bottom: 55px;
-}
 
-@media (min-width: $tablet-width) {
-  .order-choice {
+  @media (min-width: $tablet-width) {
+    margin-top: 56px;
     margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 99px;
   }
 }
 
@@ -20,8 +23,13 @@
   margin-bottom: 29px;
   padding: 0;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 14px;
+  }
+
   @media (min-width: $desktop-width) {
     margin-left: 175px;
     margin-right: 175px;
+    margin-bottom: 13px;
   }
 }

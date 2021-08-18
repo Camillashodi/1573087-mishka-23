@@ -70,7 +70,7 @@
 .reviews__body {
   padding: 0;
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 31px;
 }
 
 @media (min-width: $tablet-width) {
@@ -109,7 +109,9 @@
 
 .reviews__author-email {
   display: block;
-  margin-top: 4px;
+  //margin-top: 4px;
+
+  @include font-styles(17px, normal, 30px);
 }
 
 .reviews__button-wrapper {

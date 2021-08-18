@@ -1,6 +1,12 @@
-@media (min-width: $tablet-width) {
-  .catalog {
+.catalog {
+  margin-top: 30px;
+
+  @media (min-width: $tablet-width) {
     margin-top: 67px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 111px;
   }
 }
 
@@ -21,9 +27,29 @@
     "title"
     "description"
     "order";
-  margin-top: 30px;
-  margin-bottom: 10px;
+  grid-template-rows: 195px min-content min-content min-content;
+  margin-bottom: 30px;
+  box-sizing: border-box;
   border-bottom: $catalog-border;
+  border-left: $catalog-border;
+  border-right: $catalog-border;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -33,12 +59,13 @@
       "image description"
       "image order";
     grid-template-rows: min-content min-content 1fr;
+    grid-template-columns: min-content 1fr;
     align-items: start;
     margin-top: 0;
     border-top: $catalog-border;
 
     &:not(:first-child) {
-      margin-top: 55px;
+      margin-top: 53px;
     }
   }
 }
@@ -51,7 +78,8 @@
       "description"
       "order";
     grid-template-rows: min-content min-content min-content minmax(min-content, 1fr);
-    grid-template-columns: 315px;
+    grid-template-columns: 314px;
+    min-height: 659px;
     align-items: start;
     margin-top: 0;
     border-top: $catalog-border;
@@ -60,7 +88,7 @@
 
     &:not(:first-child) {
       margin-top: 0;
-      margin-left: 50px;
+      margin-left: 51px;
     }
   }
 }
@@ -70,8 +98,7 @@
   text-decoration: none;
   color: $text-title-color;
   grid-area: title;
-  margin-top: 27px;
-  margin-bottom: 6px;
+  margin-top: 28px;
   padding: 0 28px;
 
   &:hover,
@@ -81,6 +108,16 @@
 
   &:active {
     color: $text-link-active-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 27px;
+    margin-top: 27px;
   }
 }
 
@@ -92,6 +129,12 @@
 
 .catalog__image-link {
   grid-area: image;
+
+  img {
+    display: block;
+    height: 195px;
+    width: 260px;
+  }
 
   @media (min-width: $tablet-width) {
     img {
@@ -116,27 +159,73 @@
   margin: 0;
   padding: 0 28px;
   margin-bottom: 18px;
+  margin-top: 5px;
 
   @include font-styles(var(--font-size-product-desc), normal, var(--line-size-product-desc));
+
+  @media (min-width: $tablet-width) {
+    padding: 0 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 26px;
+    margin-bottom: 12px;
+  }
 }
 
 .catalog__order {
   grid-area: order;
+  align-self: end;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 28px;
+  margin: 0;
+  margin-left: 28px;
+  margin-right: 27px;
   border-top: $catalog-border;
 
   @media (min-width: $tablet-width) {
     align-self: end;
+    margin-left: 32px;
+    margin-right: 31px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 26px;
+    margin-right: 32px;
   }
 }
 
 .catalog__product-price {
   @include font-styles(var(--font-size-product-price), bold, var(--line-size-product-price));
+  margin: 0;
+  padding: 0;
+  padding-bottom: 3px;
 }
 
 .catalog__order-button {
-  padding: 22px;
+  padding-top: 20px;
+  padding-bottom: 22px;
+  padding-left: 22px;
+  padding-right: 0;
+  justify-self: flex-end;
+
+  &:hover,
+  &:focus {
+    path {
+      fill: $button-modal-color;
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    path {
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 22px;
+    padding-bottom: 20px;
+  }
 }
