@@ -21,7 +21,7 @@
     grid-template-columns: 682px 78px 1fr;
     padding-bottom: 0;
     border-top: $catalog-border;
-    margin-top: 57px;
+    margin-top: 7px;
     margin-bottom: 104px;
   }
 }
@@ -84,6 +84,11 @@
 .making__video {
   margin-bottom: 26px;
   position: relative;
+
+  img {
+    width: 258px;
+    height: 150px;
+  }
 
   @media (min-width: $tablet-width) {
     order: -1;
