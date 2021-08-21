@@ -35,16 +35,25 @@
     padding-left: 0;
     z-index: 2;
     position: absolute;
-    left: calc(50% - (var(--wrapper-width) / 2));
+    left: calc(50% - (var(--wrapper-width) / 2) - 2px);
 
     img {
       margin-left: 0;
+      width: 114px;
+      height: 46px;
     }
   }
 
   @media (min-width: $desktop-width) {
     padding-left: 22px;
-    left: calc(50% - (var(--logo-width) / 2));
+    left: calc(50% - (149px / 2) - 22px);
+    padding-top: 9px;
+    padding-bottom: 9px;
+
+    img {
+      width: 149px;
+      height: 72px;
+    }
   }
 }
 

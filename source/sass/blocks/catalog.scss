@@ -83,12 +83,23 @@
     align-items: start;
     margin-top: 0;
     border-top: $catalog-border;
-    margin-bottom: 0;
     box-sizing: border-box;
+    margin-bottom: 50px;
+
+    &:last-child {
+      margin-bottom: 50px;
+    }
 
     &:not(:first-child) {
       margin-top: 0;
-      margin-left: 51px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+
+    &:nth-child(3n) {
+      margin-right: 0;
     }
   }
 }
@@ -133,7 +144,7 @@
   img {
     display: block;
     height: 195px;
-    width: 260px;
+    width: 258px;
   }
 
   @media (min-width: $tablet-width) {
@@ -145,6 +156,9 @@
   }
 
   @media (min-width: $desktop-width) {
+    justify-self: stretch;
+    align-self: stretch;
+
     img {
       display: block;
       height: 462px;

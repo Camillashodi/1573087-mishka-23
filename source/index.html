@@ -4,9 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HTML Academy: Мишка</title>
-    <link rel="icon" href="favicon.ico" />
-    <link rel="icon" href="favicon/favicon.svg" />
-    <link rel="icon" href="favicon/180.png" />
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="icon" href="img/favicon/favicon.svg" />
+    <link rel="icon" href="img/favicon/180.png" />
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -14,10 +14,16 @@
     <header class="page-header">
       <div class="page-header__wrapper">
         <a class="page-header__logo">
-          <img
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/content/mishka-logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/content/mishka-logo-tablet.svg">
+            <img
             src="img/content/mishka-logo-underline.svg"
             alt="Магазин «Мишка»"
-          />
+            width="86"
+            height="35"
+            />
+          </picture>
         </a>
       </div>
       <nav class="main-nav">
@@ -104,12 +110,17 @@
             </tr>
           </table>
           <p class="weekly-product__image">
-            <img
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/content/triple-set-desktop.jpg 1x, img/content/triple-set-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/content/triple-set-tablet.jpg 1x, img/content/triple-set-tablet@2x.jpg 2x">
+              <img
               src="img/content/triple-set-light.jpg"
+              srcset="img/content/triple-set-light@2x.jpg 2x"
               alt="Три корзинки пастельных цветов круглой формы"
               height="315"
               width="260"
             />
+            </picture>
           </p>
           <p class="weekly-product__price">
             <b>Цена: 990 руб.</b>

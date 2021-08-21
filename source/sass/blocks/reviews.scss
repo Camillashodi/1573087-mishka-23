@@ -29,6 +29,11 @@
     padding-top: 81px;
     padding-bottom: 130px;
     background: url("../img/backgrounds/review-background.jpg") no-repeat 0 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/backgrounds/review-background@2x.jpg");
+      background-size: 350px 457px;
+    }
   }
 
   @media (min-width: $desktop-width) {
