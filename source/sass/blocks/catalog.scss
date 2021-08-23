@@ -107,6 +107,7 @@
 
 .catalog__title-link {
   text-decoration: none;
+  outline: none;
   color: $text-title-color;
   grid-area: title;
   margin-top: 28px;
@@ -140,6 +141,7 @@
 
 .catalog__image-link {
   grid-area: image;
+  outline: none;
 
   img {
     display: block;
@@ -223,17 +225,18 @@
   padding-left: 22px;
   padding-right: 0;
   justify-self: flex-end;
+  outline: none;
 
   &:hover,
   &:focus {
-    path {
+    .catalog__icon {
       fill: $button-modal-color;
       opacity: 1;
     }
   }
 
   &:active {
-    path {
+    .catalog__icon {
       opacity: 0.3;
     }
   }

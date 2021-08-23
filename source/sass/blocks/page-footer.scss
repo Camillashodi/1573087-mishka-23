@@ -27,6 +27,18 @@
 
 .page-footer__logo {
   display: none;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    .page-footer__logo-icon {
+      fill: $mail-hover-color;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {

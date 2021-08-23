@@ -27,7 +27,7 @@
     grid-template-columns: 1fr 175px;
     position: relative;
     padding-top: 81px;
-    padding-bottom: 130px;
+    padding-bottom: 127px;
     background: url("../img/backgrounds/review-background.jpg") no-repeat 0 0;
 
     @media (min-resolution: 2dppx) {
@@ -43,7 +43,7 @@
     grid-template-columns: 175px 1fr 175px;
     position: relative;
     background-position: var(--wrapper-padding) 0;
-    padding-top: 78px;
+    padding-top: 79px;
   }
 }
 
@@ -169,5 +169,12 @@
   .reviews__add-button {
     grid-area: button;
     align-self: start;
+    margin-top: -1px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .reviews__add-button {
+    margin-top: 0;
   }
 }

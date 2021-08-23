@@ -99,6 +99,7 @@
   &:hover,
   &:focus-within {
     transform: scaleY(1.04);
+    outline: none;
 
     @media (min-width: $tablet-width) {
       transform: translateY(-2px);
@@ -157,6 +158,7 @@
   justify-content: space-between;
   padding-top: 25px;
   padding-bottom: 17px;
+  outline: none;
 
   &:focus,
   &:hover {
