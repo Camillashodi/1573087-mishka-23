@@ -385,42 +385,44 @@
   }
 }
 
-.order-form__input-text--tel {
-  background-image: url("../img/icons/phone.svg");
-  background-repeat: no-repeat;
-  background-position: 97% 35%;
+.order-form__input-icon {
+  position: absolute;
+}
+
+.order-form__input-icon--tel {
+  right: 7px;
+  top: 30px;
 
   @media (min-width: $tablet-width) {
-    background-position: 95% 38%;
+    right: 25px;
+    top: 10px;
   }
 
   @media (min-width: $desktop-width) {
-    background-position: 99% 38%;
+    right: 8px;
+    top: 10px;
   }
 }
 
-.order-form__input-text--tel:hover,
-.order-form__input-text--tel:focus {
-  background-image: url("../img/icons/phone-hover.svg");
-}
-
-.order-form__input-text--mail {
-  background-image: url("../img/icons/mail.svg");
-  background-repeat: no-repeat;
-  background-position: 99% 53%;
+.order-form__input-icon--mail {
+  right: 2px;
+  top: 35px;
 
   @media (min-width: $tablet-width) {
-    background-position: 95% 49%;
+    right: 23px;
+    top: 14px;
   }
 
   @media (min-width: $desktop-width) {
-    background-position: 99% 52%;
+    right: 7px;
+    top: 15px;
   }
 }
 
-.order-form__input-text--mail:hover,
-.order-form__input-text--mail:focus {
-  background-image: url("../img/icons/mail-hover.svg");
+.order-form__group--single:hover > .order-form__input-icon,
+.order-form__group--single:focus-within > .order-form__input-icon {
+  fill: $mail-undelline-color;
+  opacity: 1;
 }
 
 .order-form__textarea {

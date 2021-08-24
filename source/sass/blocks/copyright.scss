@@ -14,10 +14,11 @@
 
 .copyright__link {
   margin-left: 27px;
+  outline: none;
 
   &:hover,
   &:focus {
-    path {
+    .copyright__icon {
       fill: $mail-hover-color;
     }
   }

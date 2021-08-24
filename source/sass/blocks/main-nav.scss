@@ -195,6 +195,7 @@
   color: $text-nav-color;
   text-decoration: none;
   position: relative;
+  outline: none;
 
   svg {
     position: absolute;
@@ -206,7 +207,7 @@
   &:focus {
     color: $text-nav-hover-color;
 
-    path {
+    .main-nav__icon {
       fill: $button-modal-color;
       opacity: 1;
     }

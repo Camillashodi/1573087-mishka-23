@@ -22,10 +22,11 @@
 .social__link {
   padding: 20px;
   display: block;
+  outline: none;
 
   &:hover,
   &:focus {
-    path {
+    .social__icon {
       fill: $mail-hover-color;
     }
   }

@@ -27,7 +27,7 @@
 
     iframe {
       height: 457px;
-      margin-bottom: 45px;
+      margin-bottom: 46px;
       background-image: url("../img/backgrounds/map-tablet.png");
 
       @media (min-resolution: 2dppx) {
@@ -161,6 +161,7 @@
   color: inherit;
   position: relative;
   text-decoration: none;
+  outline: none;
 
   &::after {
     content: "";
