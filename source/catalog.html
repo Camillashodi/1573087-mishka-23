@@ -4,11 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
-    <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="favicon/favicon.svg">
-    <link rel="icon" href="favicon/180.png">
-    <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="icon" href="img/favicon/favicon.svg" />
+    <link rel="icon" href="img/favicon/180.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -131,6 +131,9 @@
               </a>
               <a href="#" class="catalog__image-link">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/content/product-3-desktop.webp 1x, img/content/product-3-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/content/product-3-tablet.webp 1x, img/content/product-3-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/content/product-3-light.webp 1x, img/content/product-3-light@2x.webp 2x">
                   <source media="(min-width: 1150px)" srcset="img/content/product-3-desktop.jpg 1x, img/content/product-3-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/content/product-3-tablet.jpg 1x, img/content/product-3-tablet@2x.jpg 2x">
                   <img width="260" height="195" src="img/content/product-3-light.jpg" srcset="img/content/product-3-light@2x.jpg 2x" alt="Двухцветная корзинка, крупной вязки" class="catalog__image">
@@ -158,6 +161,9 @@
           </h2>
           <div class="making__video">
             <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/content/poster-img-desktop.webp 1x, img/content/poster-img-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/content/poster-img-tablet.webp 1x, img/content/poster-img-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/content/poster-img-light.webp 1x, img/content/poster-img-light@2x.webp 2x">
               <source media="(min-width: 1150px)" srcset="img/content/poster-img-desktop.jpg 1x, img/content/poster-img-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/content/poster-img-tablet.jpg 1x, img/content/poster-img-tablet@2x.jpg 2x">
               <img src="img/content/poster-img-light.jpg" srcset="img/content/poster-img-light@2x.jpg 2x" alt="Вязание корзинки" width="260" height="150" class="making__poster">
@@ -275,5 +281,6 @@
         </form>
       </div>
     </section>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
