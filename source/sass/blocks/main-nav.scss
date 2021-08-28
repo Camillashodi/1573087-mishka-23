@@ -216,7 +216,7 @@
   &:active {
     color: $text-nav-active-color;
 
-    path {
+    .main-nav__icon {
       fill: $button-modal-color;
       opacity: 0.3;
     }

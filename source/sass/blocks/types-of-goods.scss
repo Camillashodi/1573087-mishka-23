@@ -160,9 +160,23 @@
   padding-bottom: 17px;
   outline: none;
 
+  svg {
+    opacity: 0.5;
+  }
+
   &:focus,
   &:hover {
     transform: translateY(-5px);
+
+    svg {
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    svg {
+      opacity: 0.3;
+    }
   }
 
   span {
