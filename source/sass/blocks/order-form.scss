@@ -374,6 +374,7 @@
 .order-form__input-text--mail {
   margin-top: 4px;
   margin-bottom: 3px;
+  padding-right: 38px;
 
   @media (min-width: $tablet-width) {
     margin-top: 0;
@@ -382,6 +383,11 @@
     padding-top: 13px;
     padding-bottom: 15px;
     margin-bottom: 0;
+    padding-right: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 38px;
   }
 }
 

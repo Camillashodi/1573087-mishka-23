@@ -8,6 +8,15 @@
   box-sizing: border-box;
   margin-bottom: 58px;
 
+  &:hover,
+  &:focus-within {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+
   @media (min-width: $tablet-width) {
     margin-top: 51px;
     padding-bottom: 45px;
@@ -30,7 +39,7 @@
   color: $text-title-color;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   margin: 0;
   margin-bottom: 26px;
   padding: 0;
@@ -130,7 +139,7 @@
   &:active {
     transform: scale(0.8);
 
-    path {
+    svg {
       opacity: 0.3;
     }
   }
