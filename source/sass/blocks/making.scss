@@ -114,6 +114,7 @@
     grid-row-start: 1;
     grid-row-end: 4;
     margin-bottom: 0;
+    align-self: start;
 
     img {
       display: block;
@@ -193,6 +194,7 @@
     grid-row-start: 3;
     padding-left: 44px;
     padding-right: 44px;
+    margin-bottom: 10px;
     align-self: start;
     justify-self: start;
   }

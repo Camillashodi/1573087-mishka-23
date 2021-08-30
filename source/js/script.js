@@ -27,6 +27,7 @@ let addEventOnButton = function (button, modal) {
 };
 
 navList.classList.remove("main-nav__list--nojs");
+navToggleButton.classList.remove("main-nav__toggle--nojs");
 
 navToggleButton.addEventListener("click", function() {
   navList.classList.toggle("main-nav__list--active");

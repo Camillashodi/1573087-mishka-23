@@ -190,12 +190,20 @@
   border: 2px solid $mail-undelline-color;
 }
 
+.order-form__radio-button + .order-form__label--radio:hover::before {
+  border: 2px solid $mail-undelline-color;
+}
+
 .order-form__radio-button:hover + .order-form__label--radio:active::before {
   border: 2px solid rgba(68, 68, 68, 0.3);
 }
 
 .order-form__radio-button + .order-form__label--radio:active::before {
   border: 2px solid rgba(68, 68, 68, 0.3);
+}
+
+.order-form__radio-button:disabled + .order-form__label--radio {
+  opacity: 0.3;
 }
 
 .order-form__checkbox-list {
@@ -296,6 +304,10 @@
 
 .order-form__checkbox + .order-form__label--checkbox:active::before {
   border: $modal-label-border-hover;
+}
+
+.order-form__checkbox:disabled + .order-form__label--checkbox {
+  opacity: 0.3;
 }
 
 .order-form__text-list {
@@ -466,14 +478,15 @@
   @media (min-width: $tablet-width) {
     @include wrapper();
     display: grid;
-    grid-template-columns: 230px 1fr max-content;
+    grid-template-columns: 230px 1fr minmax(302px, 400px);
     align-items: baseline;
     margin-top: 51px;
+    text-align: right;
   }
 
   @media (min-width: $desktop-width) {
     margin-top: 48px;
-    grid-template-columns: 230px 1fr max-content;
+    grid-template-columns: 230px 1fr minmax(485px, 600px);
   }
 }
 

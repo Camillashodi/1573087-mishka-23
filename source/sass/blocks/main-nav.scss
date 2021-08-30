@@ -41,6 +41,12 @@
   height: 20px;
 }
 
+@media (max-width: $mobile-width-only) {
+  .main-nav__toggle--nojs {
+    display: none;
+  }
+}
+
 .main-nav__list {
   @include list-style-none();
 
