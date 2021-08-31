@@ -9,15 +9,17 @@
     display: grid;
     grid-template-columns: 320px 1fr;
     grid-template-rows: min-content min-content;
-    grid-template-areas: "logo user-links"
-                          "links text";
+    grid-template-areas:
+      "logo user-links"
+      "links text";
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 377px 1fr 350px;
     grid-template-rows: 89px min-content;
-    grid-template-areas: "links logo user-links"
-                          "links-add links-add text";
+    grid-template-areas:
+      "links logo user-links"
+      "links-add links-add text";
   }
 }
 
@@ -130,6 +132,7 @@
     grid-area: user-links;
     justify-content: space-between;
     align-items: stretch;
+
     @include font-styles(var(--font-size-nav-big), bold, var(--line-size-nav-big));
 
     svg {
@@ -227,6 +230,7 @@
     display: flex;
     grid-area: links-add;
     justify-content: flex-start;
+
     @include font-styles(var(--font-size-nav), bold, var(--line-size-nav));
   }
 }
