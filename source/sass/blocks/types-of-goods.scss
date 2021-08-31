@@ -3,6 +3,7 @@
   background-color: $background-type-color;
   background-position: 50% -17px;
   position: relative;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 
   @media (min-resolution: 2dppx) {
     background: url("../img/backgrounds/type-of-goods-light@2x.jpg") no-repeat;
@@ -15,6 +16,7 @@
     background: url("../img/backgrounds/type-of-goods.jpg") no-repeat;
     background-position: 50% 0;
     background-color: $background-type-color;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/backgrounds/type-of-goods@2x.jpg");

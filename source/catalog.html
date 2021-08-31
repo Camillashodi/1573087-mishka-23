@@ -15,40 +15,49 @@
   <body class="page__body">
     <header class="page-header">
       <div class="page-header__wrapper">
-        <a href="index.html" class="page-header__logo">
-          <picture>
-            <source media="(min-width: 1150px)" srcset="img/content/mishka-logo-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/content/mishka-logo-tablet.svg">
-            <img
-            src="img/content/mishka-logo-underline.svg"
-            alt="Магазин «Мишка»"
-            width="86"
-            height="35"
-            />
-          </picture>
-        </a>
-      </div>
-      <nav class="main-nav">
-        <button class="main-nav__toggle main-nav__toggle--nojs" type="button"><!-- main-nav__toggle--nojs -  класс для скрытия кнопки при откл js-->
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list main-nav__list--nojs"><!-- main-nav__list--nojs -  класс для отображения меню при откл js-->
+        <nav class="main-nav">
+          <a href="index.html" class="main-nav__logo">
+            <picture>
+              <source
+                media="(min-width: 1150px)"
+                srcset="img/content/mishka-logo-desktop.svg"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="img/content/mishka-logo-tablet.svg"
+              />
+              <img
+                src="img/content/mishka-logo-underline.svg"
+                alt="Магазин «Мишка»"
+                width="86"
+                height="35"
+              />
+            </picture>
+          </a>
+          <button class="main-nav__toggle main-nav__toggle--nojs" type="button">
+            <!-- main-nav__toggle--nojs -  класс для скрытия кнопки при откл js-->
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <ul class="main-nav__list main-nav__list--nojs">
+            <!-- main-nav__list--nojs -  класс для отображения меню при откл js-->
             <li class="main-nav__item">
               <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__link" href="form.html">Вязание на заказ</a>
             </li>
-            <li class="main-nav__item main-nav__item--add">
-              <a class="main-nav__link" href="#">Новые поступления</a>
-            </li>
-            <li class="main-nav__item main-nav__item--add">
-              <a class="main-nav__link" href="#">Распродажа</a>
-            </li>
+          </ul>
+          <ul class="main-nav__list main-nav__list--nojs main-nav__list--user-links">
             <li class="main-nav__item main-nav__item--search">
               <a class="main-nav__link" href="#">
-                <svg class="main-nav__icon" width="18" height="18" fill="#000" opacity=".2" xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  class="main-nav__icon"
+                  width="18"
+                  height="18"
+                  fill="#000"
+                  opacity=".2"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <use xlink:href="img/sprite.svg#icon-loupe"></use>
                 </svg>
                 <span>Поиск по сайту</span>
@@ -56,16 +65,32 @@
             </li>
             <li class="main-nav__item main-nav__item--cart">
               <a class="main-nav__link" href="#">
-                <svg class="main-nav__icon" width="20" height="19" fill="#000" opacity=".2" fill="#000" xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  class="main-nav__icon"
+                  width="20"
+                  height="19"
+                  fill="#000"
+                  opacity=".2"
+                  fill="#000"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <use xlink:href="img/sprite.svg#icon-cart"></use>
                 </svg>
                 <span>Корзина: пока пуста</span>
               </a>
             </li>
           </ul>
-        </div>
-      </nav>
-      <p class="page-header__text">Бесплатная доставка по России</p>
+          <ul class="main-nav__list main-nav__list--nojs main-nav__list--add">
+            <li class="main-nav__item main-nav__item--add">
+              <a class="main-nav__link" href="#">Новые поступления</a>
+            </li>
+            <li class="main-nav__item main-nav__item--add">
+              <a class="main-nav__link" href="#">Распродажа</a>
+            </li>
+          </ul>
+          <p class="main-nav__text">Бесплатная доставка по России</p>
+        </nav>
+      </div>
     </header>
     <main class="page-catalog">
       <header class="main-header">

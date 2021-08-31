@@ -1,5 +1,5 @@
 const mainNav = document.querySelector(".main-nav");
-const navList = mainNav.querySelector(".main-nav__list");
+const navLists = mainNav.querySelectorAll(".main-nav__list");
 const navToggleButton = mainNav.querySelector(".main-nav__toggle");
 const modal = document.querySelector(".modal-order");
 const modalButtom = document.querySelector(".weekly-product__order");
@@ -26,11 +26,18 @@ let addEventOnButton = function (button, modal) {
   });
 };
 
-navList.classList.remove("main-nav__list--nojs");
+
+for (let i = 0; i < navLists.length; i++) {
+  navLists[i].classList.remove("main-nav__list--nojs");
+}
+
 navToggleButton.classList.remove("main-nav__toggle--nojs");
 
+
 navToggleButton.addEventListener("click", function() {
-  navList.classList.toggle("main-nav__list--active");
+  for (let i = 0; i < navLists.length; i++) {
+    navLists[i].classList.toggle("main-nav__list--active");
+  }
   navToggleButton.classList.toggle("main-nav__toggle--active");
 });
 
