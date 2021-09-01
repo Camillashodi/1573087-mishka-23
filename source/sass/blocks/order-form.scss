@@ -39,12 +39,9 @@
 .order-form__group {
   display: flex;
   flex-direction: column;
-  //margin-bottom: 32px;
   position: relative;
 
   @media (min-width: $tablet-width) {
-    //display: grid;
-    //grid-template-columns: 169px 1fr;
     display: block;
     padding-left: 167px;
   }

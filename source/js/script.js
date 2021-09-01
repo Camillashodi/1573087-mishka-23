@@ -9,7 +9,7 @@ const catalog = document.querySelector(".catalog");
 let closeModalWindow = function () {
   document.addEventListener("click", function(e) {
     const target = e.target;
-    if (!target.closest(".catalog__order-button") && !target.closest(".modal-order") && !target.closest(".weekly-product__order")) {
+    if (target == modal) {
       modal.classList.remove("modal-order--active");
     }
   });

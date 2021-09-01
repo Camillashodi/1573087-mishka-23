@@ -35,11 +35,9 @@
             </picture>
           </a>
           <button class="main-nav__toggle main-nav__toggle--nojs" type="button">
-            <!-- main-nav__toggle--nojs -  класс для скрытия кнопки при откл js-->
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <ul class="main-nav__list main-nav__list--nojs">
-            <!-- main-nav__list--nojs -  класс для отображения меню при откл js-->
             <li class="main-nav__item">
               <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
             </li>
@@ -71,7 +69,6 @@
                   height="19"
                   fill="#000"
                   opacity=".2"
-                  fill="#000"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <use xlink:href="img/sprite.svg#icon-cart"></use>
@@ -121,7 +118,7 @@
                 <p class="catalog__product-price">1 200 руб.</p>
                 <a href="#" class="catalog__order-button">
                   <span class="visually-hidden">Заказать</span>
-                  <svg class="catalog__icon" width="20" height="19" fill="#000" opacity=".2" fill="#000" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="catalog__icon" width="20" height="19" fill="#000" opacity=".2" xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="img/sprite.svg#icon-cart"></use>
                   </svg>
                 </a>
@@ -146,7 +143,7 @@
                 <p class="catalog__product-price">690 руб.</p>
                 <a href="#" class="catalog__order-button">
                   <span class="visually-hidden">Заказать</span>
-                  <svg class="catalog__icon" width="20" height="19" fill="#000" opacity=".2" fill="#000" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="catalog__icon" width="20" height="19" fill="#000" opacity=".2" xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="img/sprite.svg#icon-cart"></use>
                   </svg>
                 </a>
@@ -171,7 +168,7 @@
                 <p class="catalog__product-price">1 500 руб.</p>
                 <a href="#" class="catalog__order-button">
                   <span class="visually-hidden">Заказать</span>
-                  <svg class="catalog__icon" width="20" height="19" fill="#000" opacity=".2" fill="#000" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="catalog__icon" width="20" height="19" fill="#000" opacity=".2" xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="img/sprite.svg#icon-cart"></use>
                   </svg>
                 </a>
@@ -213,7 +210,6 @@
           <svg class="page-footer__logo-icon" role="img" aria-label="Магазин «Мишка»" width="102" height="35" fill="#000" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="img/sprite.svg#logo-footer"></use>
           </svg>
-          <!--<img src="img/content/logo-footer.svg" alt="Магазин «Мишка»" />-->
         </a>
         <div class="page-footer__social social">
           <ul class="social__list">
@@ -263,7 +259,7 @@
     </footer>
     <section class="modal-order">
       <div class="modal-order__wrapper">
-        <h2 class="modal-order__title">Добавить&nbsp<br>в корзину</h2>
+        <h2 class="modal-order__title">Добавить&nbsp;<br>в корзину</h2>
         <form
           action="https://echo.htmlacademy.ru"
           method="POST"
@@ -274,7 +270,7 @@
             <ul class="modal-form__checkbox-list">
               <li class="modal-form__checkbox-item">
                 <input
-                  class="modal-form__checkbox-input"
+                  class="modal-form__checkbox-input visually-hidden"
                   type="checkbox"
                   id="size-S"
                   name="size-S"
@@ -284,7 +280,7 @@
               </li>
               <li class="modal-form__checkbox-item">
                 <input
-                  class="modal-form__checkbox-input"
+                  class="modal-form__checkbox-input visually-hidden"
                   type="checkbox"
                   id="size-M"
                   name="size-M"
@@ -293,7 +289,7 @@
               </li>
               <li class="modal-form__checkbox-item">
                 <input
-                  class="modal-form__checkbox-input"
+                  class="modal-form__checkbox-input visually-hidden"
                   type="checkbox"
                   id="size-L"
                   name="size-L"
